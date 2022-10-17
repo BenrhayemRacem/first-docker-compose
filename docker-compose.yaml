@@ -1,0 +1,22 @@
+
+
+services:
+  backend1:
+    build:
+      context: backend1
+    ports:
+      - "5000:5000"
+    networks:
+      - public
+      - private
+  backend2:
+    build:
+      context: backend2
+    ports:
+      - "5001"
+    networks:
+      - private
+
+networks:
+   private: {}
+   public: {}
